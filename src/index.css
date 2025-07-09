@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* توجيه النص من اليمين إلى اليسار */
+[dir='ltr'] {
+  direction: rtl;
+  text-align: right;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.bg-dark-green {
+  background-color: #004B46;
+}
+
+/* تطبيق الخط على جميع العناصر */
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.font-IBM_Plex_Sans_Arabic {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+/* القواعد المتجاوبة لمختلف الأجهزة */
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* حل مشكلة تداخل العناصر على الشاشات الصغيرة */
+.break-words {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* التعامل مع الصور بشكل متجاوب */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* تعزيز فهرسة الصفحة */
+main {
+  flex: 1 0 auto;
+}
+
+/* هوامش متناسبة للشاشات المختلفة */
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
